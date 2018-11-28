@@ -1,0 +1,17 @@
+[
+  "test_1_login/test_01_login.py::TestLogin::test_login_fail_with_right_uname_wrong_pwd",
+  "test_1_login/test_01_login.py::TestLogin::test_login_fail_with_wrong_uname_right_pwd",
+  "test_1_login/test_01_login.py::TestLogin::test_login_fail_with_wrong_uname_wrong_pwd",
+  "test_1_login/test_01_login.py::TestLogin::test_login_success",
+  "test_1_login/test_02_get_main_page.py::TestGetServicesDetail::test_services_detail_P150",
+  "test_1_login/test_02_get_main_page.py::TestGetServicesDetail::test_services_detail_servicePrice",
+  "test_1_login/test_02_get_main_page.py::TestGetServicesDetail::test_services_detail_shareEnabled",
+  "test_1_login/test_02_get_main_page.py::TestGetServicesDetail::test_services_detail_short_name",
+  "test_2_measure/test_01_measure.py::TestMeasure::test_1_words",
+  "test_2_measure/test_01_measure.py::TestMeasure::test_2_grammer",
+  "test_2_measure/test_01_measure.py::TestMeasure::test_3_listen",
+  "test_2_measure/test_01_measure.py::TestMeasure::test_4_read",
+  "test_2_measure/test_01_measure.py::TestMeasure::test_5_write",
+  "test_2_measure/test_02_measure_report.py::TestGetMeasureReport::test_get_measure_report",
+  "test_2_measure/test_03_measure_result.py::TestGetMeasureResult::test_get_measure_result"
+]

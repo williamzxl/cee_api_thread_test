@@ -1,16 +1,4 @@
-import multiprocessing
-from testcase.api.login.login_all_api import LoginApi
-from utils.config import NewConfig
-from testcase.api.studyCenter.getServiceInfo_step1 import GetServiceInfo
-from testcase.api.studyCenter.getTaskInfo_step2 import GetTaskInfo
-from testcase.api.studyCenter.startLearning_step3 import StartLearning
-from testcase.api.studyCenter.getTaskInfo_step4 import GetTaskInfo2
-
-from testcase.api.studyCenter.words_lists.all_cihui import AllCihuiInterface
 from testcase.api.studyCenter.sysListening.all_listening_interface import AllListenInterface
-from testcase.api.studyCenter       .reading.all_reading_interface import AllReadInterface
-from testcase.api.studyCenter.grammar.all_gra_interface import AllGraInterface
-from testcase.api.studyCenter.writing.all_wrt_interface import AllWrtInterface
 
 
 def finish_lis(task, common, headers, access_token):

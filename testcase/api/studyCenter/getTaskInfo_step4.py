@@ -14,8 +14,11 @@ class GetTaskInfo2(object):
         self.headers.update({"accesstoken": self.accesstoken})
         self.headers.update({"Host": common.get("baseProxy")})
 
-    def get_all_tasks_id(self, sevicesID=None):
+    def get_all_tasks_id(self, sevicesID=None, P=None):
+        # if P == None:
         url = "{}/userStudyCenter/{}/taskInfo".format(self.baseUrl, sevicesID)
+        # else:
+        #     url = "{}/userStudyCenter/{}/taskInfo".format(self.baseUrl, sevicesID)
         querystring = {"taskID": ""}
         response = requests.request("GET", url, headers=self.headers, params=querystring)
         data = eval(response.text).get("data")
@@ -24,7 +27,6 @@ class GetTaskInfo2(object):
             practice = data.get('practice')
             all_tasks = []
             for p in practice:
-                print("P", p)
                 if p.get("studyType") == "VOC":
                     lists = p.get("questGuide")
                     voc = {"VOC": lists}
@@ -52,9 +54,7 @@ if __name__ == '__main__':
     cfg_info = NewConfig()
     devices = cfg_info.get_info('vivox6')
     c, h = cfg_info.get_info("vivox6")
-    print(c)
-    print(h)
     a = 'a29316f8-16a5-4073-b784-ce206dcb92ea'
-    mI = GetTaskInfo(c,h,a)
+    mI = GetTaskInfo2(c,h,a)
     a = mI.get_task_id("P90")
     print(a)

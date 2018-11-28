@@ -17,10 +17,7 @@ class PostMeasureWords(object):
             if c == 0:
                 data = {"elapsedSec":29,"stepType":0}
                 data.update(u)
-                print("data", data)
-                print("headers", self.headers)
                 response = requests.request("POST", url, headers=self.headers, json=data)
-                print("response.text", response.text)
                 if len(eval(response.text).get('data')) != 0:
                     return eval(response.text).get('data')
             else:

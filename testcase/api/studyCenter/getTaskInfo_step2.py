@@ -19,7 +19,7 @@ class GetTaskInfo(object):
         querystring = {"taskID": ""}
         response = requests.request("GET", url, headers=self.headers, params=querystring)
         data = eval(response.text).get("data")
-        print(data)
+        # print(data)
         message = eval(response.text).get("message")
         if message == "success":
             scheduleID = data.get("scheduleID")

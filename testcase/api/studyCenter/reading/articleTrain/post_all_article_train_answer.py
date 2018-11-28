@@ -15,11 +15,11 @@ class PostAllArtTrainAnswers(object):
     def post_all_art_train_answer(self, taskID, user_answer):
         url = "{}/userReading/{}/saveArticleTrainAnswer".format(self.baseUrl, taskID)
         data = user_answer
-        logger.info("文章训练BBBBBBBBBB tID：{}，URL:{}".format(taskID, url))
-        logger.info("文章训练BBBBBBBBBB Post data:{}".format(data))
+        logger.info("文章训练 tID：{}，URL:{}".format(taskID, url))
+        logger.info("文章训练 Post data:{}".format(data))
         response = requests.request("POST", url, headers=self.headers, json=data)
         answer = response.text
-        logger.info("文章训练BBBBBBBBBB Response:{}".format(answer))
+        logger.info("文章训练 Response:{}".format(answer))
         # if answer.get("message") == "success":
         #     logger.info("[PASS] == {},{}",taskID, user_answer)
         # if answer.get("message") != "success":

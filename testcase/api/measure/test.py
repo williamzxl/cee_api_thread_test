@@ -29,57 +29,60 @@ if __name__ == '__main__':
     sys = GetMeasureInfo(common, headers, access_token)
     print("sys", sys)
     sysId, measureID, studyType = sys.get_sys_id(sevicesID)
-    if studyType == "VOC":
-        mWords = GetMeasureWords(common,headers, access_token)
-        currStatus, measureId, currQuestIdx, data = mWords.get_measure_words(sysId)
-        all_curr, all_right = mWords.get_all_right_answer(studyType, data)
-        print(all_curr, len(all_curr))
-        print(all_right, len(all_right))
-        postAnswer = PostMeasureWords(common, headers, access_token)
-        final_result = postAnswer.post_measure_words(measureID, all_curr, all_right)
-        if final_result:
-            print("len(final_result)", len(final_result))
-            sysId, measureID, studyType = sys.get_sys_id(sevicesID)
-    if studyType == "GRA":
-        mGra = GetMeasureGra(common, headers, access_token)
-        currStatus, measureId, currQuestIdx, data = mGra.get_measure_gra(sysId)
-        all_curr, all_right = mGra.get_all_right_answer(studyType, data)
-        print(all_curr, len(all_curr))
-        print(all_right, len(all_right))
-        postAnswer = PostMeasureGra(common, headers, access_token)
-        final_result = postAnswer.post_measure_gra(measureID, all_curr, all_right)
-        if final_result:
-            print("len(final_result)", len(final_result))
-            sysId, measureID, studyType = sys.get_sys_id(sevicesID)
-    while studyType == "LIS":
-        mLis = GetMeasureListen(common, headers, access_token)
-        currStatus, measureId, currQuestIdx, data = mLis.get_measure_listen(sysId)
-        all_right = mLis.get_all_right_answer(studyType, data)
-        print(all_right, len(all_right))
-        postAnswer = PostMeasureLis(common, headers, access_token)
-        final_result = postAnswer.post_measure_lis(measureID, all_right)
-        if final_result:
-            print("len(final_result)", len(final_result))
-            sysId, measureID, studyType = sys.get_sys_id(sevicesID)
-    if studyType == "RID":
-        mRead = GetMeasureRead(common, headers, access_token)
-        currStatus, measureId, currQuestIdx, data = mRead.get_measure_read(sysId)
-        all_curr, all_right = mRead.get_all_right_answer(studyType, data)
-        print(all_curr, len(all_curr))
-        print(all_right, len(all_right))
-        postAnswer = PostMeasureRead(common, headers, access_token)
-        final_result = postAnswer.post_measure_read(measureID, all_curr, all_right)
-        if final_result:
-            print("len(final_result)", len(final_result))
-            sysId, measureID, studyType = sys.get_sys_id(sevicesID)
-    if studyType == "WRI":
-        mWrite = GetMeasureWrite(common, headers, access_token)
-        currStatus, measureId, data = mWrite.get_measure_write(sysId)
-        all_right = mWrite.get_all_right_answer(studyType, data)
-        print(all_right, len(all_right))
-        postAnswer = PostMeasureWrite(common, headers, access_token)
-        final_result = postAnswer.post_measure_Write(measureID, all_right)
-        if final_result:
-            print("len(final_result)", len(final_result))
-            sysId, measureID, studyType = sys.get_sys_id(sevicesID)
+    if studyType == None:
+        pass
+    else:
+        if studyType == "VOC":
+            mWords = GetMeasureWords(common,headers, access_token)
+            currStatus, measureId, currQuestIdx, data = mWords.get_measure_words(sysId)
+            all_curr, all_right = mWords.get_all_right_answer(studyType, data)
+            print(all_curr, len(all_curr))
+            print(all_right, len(all_right))
+            postAnswer = PostMeasureWords(common, headers, access_token)
+            final_result = postAnswer.post_measure_words(measureID, all_curr, all_right)
+            if final_result:
+                print("len(final_result)", len(final_result))
+                sysId, measureID, studyType = sys.get_sys_id(sevicesID)
+        if studyType == "GRA":
+            mGra = GetMeasureGra(common, headers, access_token)
+            currStatus, measureId, currQuestIdx, data = mGra.get_measure_gra(sysId)
+            all_curr, all_right = mGra.get_all_right_answer(studyType, data)
+            print(all_curr, len(all_curr))
+            print(all_right, len(all_right))
+            postAnswer = PostMeasureGra(common, headers, access_token)
+            final_result = postAnswer.post_measure_gra(measureID, all_curr, all_right)
+            if final_result:
+                print("len(final_result)", len(final_result))
+                sysId, measureID, studyType = sys.get_sys_id(sevicesID)
+        while studyType == "LIS":
+            mLis = GetMeasureListen(common, headers, access_token)
+            currStatus, measureId, currQuestIdx, data = mLis.get_measure_listen(sysId)
+            all_right = mLis.get_all_right_answer(studyType, data)
+            print(all_right, len(all_right))
+            postAnswer = PostMeasureLis(common, headers, access_token)
+            final_result = postAnswer.post_measure_lis(measureID, all_right)
+            if final_result:
+                print("len(final_result)", len(final_result))
+                sysId, measureID, studyType = sys.get_sys_id(sevicesID)
+        if studyType == "RID":
+            mRead = GetMeasureRead(common, headers, access_token)
+            currStatus, measureId, currQuestIdx, data = mRead.get_measure_read(sysId)
+            all_curr, all_right = mRead.get_all_right_answer(studyType, data)
+            print(all_curr, len(all_curr))
+            print(all_right, len(all_right))
+            postAnswer = PostMeasureRead(common, headers, access_token)
+            final_result = postAnswer.post_measure_read(measureID, all_curr, all_right)
+            if final_result:
+                print("len(final_result)", len(final_result))
+                sysId, measureID, studyType = sys.get_sys_id(sevicesID)
+        if studyType == "WRI":
+            mWrite = GetMeasureWrite(common, headers, access_token)
+            currStatus, measureId, data = mWrite.get_measure_write(sysId)
+            all_right = mWrite.get_all_right_answer(studyType, data)
+            print(all_right, len(all_right))
+            postAnswer = PostMeasureWrite(common, headers, access_token)
+            final_result = postAnswer.post_measure_Write(measureID, all_right)
+            if final_result:
+                print("len(final_result)", len(final_result))
+                sysId, measureID, studyType = sys.get_sys_id(sevicesID)
     print("Finish")

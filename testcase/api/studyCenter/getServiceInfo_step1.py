@@ -19,7 +19,7 @@ class GetServiceInfo(object):
         querystring = {"serviceID": ""}
         response = requests.request("GET", url, headers=self.headers, params=querystring)
         data = eval(response.text).get("data")
-        print(data)
+        # print(data)
         message = eval(response.text).get("message")
         if message == "success":
             serviceID = data.get('serviceID')
@@ -32,12 +32,4 @@ class GetServiceInfo(object):
 
 
 if __name__ == '__main__':
-    cfg_info = NewConfig()
-    devices = cfg_info.get_info('vivox6')
-    c, h = cfg_info.get_info("vivox6")
-    print(c)
-    print(h)
-    a = 'a29316f8-16a5-4073-b784-ce206dcb92ea'
-    mI = GetMeasureInfo(c,h,a)
-    a = mI.get_sys_id("P90")
-    print(a)
+    pass

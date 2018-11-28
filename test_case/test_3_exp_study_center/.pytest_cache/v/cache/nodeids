@@ -1,0 +1,6 @@
+[
+  "test_02_exp_p120.py::TestExp120::test_0_exp_120_success",
+  "test_02_exp_p120.py::TestExp120::test_1_exp_120_fail_with_P900",
+  "test_02_exp_p120.py::TestExp120::test_2_to_finih_sa",
+  "test_02_exp_p120.py::TestExp120::test_3_to_finih_error_find"
+]

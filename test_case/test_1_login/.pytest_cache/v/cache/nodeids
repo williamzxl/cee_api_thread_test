@@ -1,0 +1,10 @@
+[
+  "test_get_main_page_02.py::TestGetServicesDetail::test_services_detail_P150",
+  "test_get_main_page_02.py::TestGetServicesDetail::test_services_detail_servicePrice",
+  "test_get_main_page_02.py::TestGetServicesDetail::test_services_detail_shareEnabled",
+  "test_get_main_page_02.py::TestGetServicesDetail::test_services_detail_short_name",
+  "test_login_01.py::TestLogin::test_login_fail_with_right_uname_wrong_pwd",
+  "test_login_01.py::TestLogin::test_login_fail_with_wrong_uname_right_pwd",
+  "test_login_01.py::TestLogin::test_login_fail_with_wrong_uname_wrong_pwd",
+  "test_login_01.py::TestLogin::test_login_success"
+]

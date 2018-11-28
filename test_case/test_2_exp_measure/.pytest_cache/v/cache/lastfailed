@@ -1,0 +1,4 @@
+{
+  "test_02_measure_report.py::TestGetMeasureReport::test_get_measure_report": true,
+  "test_measure_01.py": true
+}

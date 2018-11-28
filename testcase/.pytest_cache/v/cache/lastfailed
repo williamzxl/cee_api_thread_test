@@ -1,3 +1,14 @@
 {
+  "case/test_account_login.py": true,
+  "page/learn_center/grammer/gra_choice/test_gra_choice.py": true,
+  "page/learn_center/listening/long_conv/test_long_conv.py": true,
+  "page/learn_center/listening/sen_fill/test_sen_fill.py": true,
+  "page/learn_center/listening/word_trans/test_trans.py": true,
+  "page/learn_center/listening/word_trans/test_trans2.py": true,
+  "page/learn_center/listening/word_trans/test_trans3.py": true,
+  "page/learn_center/reading/section_train/test_sen_ana.py": true,
+  "page/learn_center/reading/sen_analysis/test_sen_ana.py": true,
+  "page/study_center/test_study_test.py": true,
+  "page/tests/test_ini.py": true,
   "test_gloable.py": true
 }

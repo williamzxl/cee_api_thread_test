@@ -15,10 +15,10 @@ class PostMeasureWrite(object):
             data = {"elapsedSec":29,"stepType":0}
             data.update(u)
             response = requests.request("POST", url, headers=self.headers, json=data)
-            print("response.text", response.text)
-            print(eval(response.text).get('data') != None)
             if len(eval(response.text).get('data')) != 0:
+                # print("88888888888888888888", response.text)
                 return eval(response.text).get('data')
+            # return response.status_code
 
 
 if __name__ == '__main__':

@@ -38,7 +38,7 @@ class NewConfig(object):
                 devices_names.append(list(d1.keys()))
         return devices_names
 
-    def get_info(self, devices_name):
+    def get_info(self, devices_name='vivox6'):
         for d in self.configs:
             for d1 in d:
                 try:

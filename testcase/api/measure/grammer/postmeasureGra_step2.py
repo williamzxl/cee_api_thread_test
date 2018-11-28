@@ -11,17 +11,17 @@ class PostMeasureGra(object):
 
     def post_measure_gra(self, measureID, curr_status, userAnswer):
         url = "{}/userMeasure/{}/measureData".format(self.baseUrl, measureID)
-        print(url)
+        # print(url)
         # ,"studyType":"VOC","sysQuestID":"100-0","userAnswer":"2"
         for c, u in zip(curr_status, userAnswer):
             if c == 0:
                 data = {"elapsedSec":29,"stepType":0}
                 data.update(u)
-                print("data", data)
-                print("headers", self.headers)
+                # print("data", data)
+                # print("headers", self.headers)
                 response = requests.request("POST", url, headers=self.headers, json=data)
-                print("response.text", response.text)
-                print(eval(response.text).get('data') != None)
+                # print("response.text", response.text)
+                # print(eval(response.text).get('data') != None)
                 if len(eval(response.text).get('data')) != 0:
                     return eval(response.text).get('data')
             else:

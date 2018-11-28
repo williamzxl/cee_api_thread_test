@@ -1,1 +1,6 @@
-[]
+[
+  "page/learn_center/listening/long_conv/test_000.py::test",
+  "page/learn_center/listening/long_conv/test_001.py::test",
+  "page/learn_center/listening/long_conv/test_002.py::test",
+  "page/learn_center/listening/long_conv/test_003.py::test"
+]

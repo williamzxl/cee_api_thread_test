@@ -15,10 +15,8 @@ class GetMeasureInfo(object):
 
     def get_sys_id(self, serviceID="0"):
         url = "{}/userMeasure/{}/measureInfo".format(self.baseUrl, serviceID)
-        print("Headers", self.headers)
         response = requests.request("GET", url, headers=self.headers)
         data = eval(response.text).get("data")
-        print(data)
         message = eval(response.text).get("message")
         if message == "success":
             sysID = data.get('sysID')
@@ -26,8 +24,7 @@ class GetMeasureInfo(object):
             studyType = data.get("studyType")
             return sysID, measureID, studyType
         else:
-            pass
-        # measureID = data.get('measureID')
+            return None ,eval(response.text), None
 
 
 if __name__ == '__main__':

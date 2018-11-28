@@ -17,10 +17,10 @@ class PostMeasureLis(object):
         for u in (userAnswer):
             data = {"elapsedSec":1000}
             data.update(u)
-            print("data", data)
+            # print("data", data)
             # print("headers", self.headers)
             response = requests.request("POST", url, headers=self.headers, json=data)
-            print("response.text", response.text)
+            # print("response.text", response.text)
             if len(eval(response.text).get('data')) != 0:
                 return eval(response.text).get('data')
 
